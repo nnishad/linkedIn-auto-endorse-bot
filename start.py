@@ -118,48 +118,6 @@ with open("connections.csv" + time.asctime(time.localtime(time.time())), "w", ne
         except Exception as e:
             print(e, "no skills left to endorse")
             pass
-        # #Currently single website
-        # try:
-        # 	website = driver.find_element_by_class_name('ci-websites').find_element_by_class_name('pv-contact-info__contact-link').text
-        # except NoSuchElementException:
-        # 	website = ""
-
-        # try:
-        # 	phone = driver.find_element_by_class_name('ci-phone').find_element_by_class_name('pv-contact-info__ci-container').find_element_by_tag_name('span').text
-        # except NoSuchElementException:
-        # 	phone = ""
-
-        # try:
-        # 	address = driver.find_element_by_class_name('ci-address').find_element_by_class_name('pv-contact-info__contact-link').text
-        # except NoSuchElementException:
-        # 	address = ""
-
-        # try:
-        # 	email = driver.find_element_by_class_name('ci-email').find_element_by_class_name('pv-contact-info__contact-link').text
-        # except NoSuchElementException:
-        # 	email = ""
-
-        # try:
-        # 	twitter = driver.find_element_by_class_name('ci-twitter').find_element_by_class_name('pv-contact-info__contact-link').text
-        # except NoSuchElementException:
-        # 	twitter = ""
-
-        # #IM
-
-        # #driver.find_element_by_class_name('artdeco-dismiss').click()
-
-        # name = driver.find_element_by_class_name('pv-top-card-section__name').text
-
-        # try:
-        # 	headline = driver.find_element_by_class_name('pv-top-card-section__headline').text
-        # except NoSuchElementException:
-        # 	headline = ""
-
-        # try:
-        # 	location = driver.find_element_by_class_name('pv-top-card-section__location').text
-        # except NoSuchElementException:
-        # 	location = ""
-
         writer.writerow({'Link': link})
         bar.next()
 
